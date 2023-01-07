@@ -208,7 +208,6 @@ def eval(individual: Bird, limit=300, show_game=True):
             # check for collision
             if pipe.collide(individual, win):
                 curr_fitness -= 1
-                print(curr_fitness)
                 return curr_fitness  # lost game but collided
 
             if pipe.x + pipe.PIPE_TOP.get_width() < 0:
@@ -229,7 +228,6 @@ def eval(individual: Bird, limit=300, show_game=True):
 
         if individual.y + getImage(
                 individual).get_height() - 10 >= FLOOR or individual.y < -50:  # indiviual escapes from screen
-            print(curr_fitness)
             return curr_fitness  # lost game
 
         if curr_fitness > limit:

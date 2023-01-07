@@ -5,7 +5,7 @@
 
 ## Intoduction
 
-"Flappy bird" is an arcade game popularized in the 2010's built for mobile phones.
+"Flappy bird" is an arcade styled game popularized in the 2010's built for mobile phones.
 #### Gameplay:
 The player play as the bird, while the goal of the game is to dodge some pipes 
 by "jumping" and getting far as one can. The pipes position varies in the game. The score increase by 1 every time the bird 
@@ -119,10 +119,23 @@ with his fitness `limit` value.
 
 ### FFmodel
 This class implements `model` property of individual. It's inheriting from `torch.nn.Module`.
-An instance of the class is `model` neural network described above.
+An instance of the class is `model` neural network described above. The parameters of the model
+are initialized as follows: setting `stdv = 1. / math.sqrt(3)` (3 is the size of the weights).
+Then the distribution `D` is `uniform(-stdv,stdv)`
 
-#### Note
 
 ### BirdCreator
 This class implements how individuals are made (inheriting from `eckity.creators.creator.Creator`). The class main method is `_create_individuals`.
-We create `n` individual by creating `n` `Bird` instance with random
+We create `n` individual by creating `n` `Bird` instances.
+
+
+## Experiment and Results
+
+For all the experiment, we used the following setting:
+
+`eckity.algorithms.simple_evolution.SimpleEvolution` object as our handler for evolution process.<br/>
+Only one subpopulation (generated from `BirdCreator`) with `elitism_rate` = `1/300` , and for our genetic operators we used
+probability `0.1` for both. We used `TournamentSelction` with size of 3. <br />
+The difference between our experiment was the initial population size, and the number of generation.
+
+

@@ -11,7 +11,7 @@ from operators import ModelParamSwapCrossOver, ModelAddDistMutation
 def main():
     algo = SimpleEvolution(
         Subpopulation(creators=BirdCreator(init_pos=(230, 350)),
-                      population_size=80,
+                      population_size=40,
                       # user-defined fitness evaluation method
                       evaluator=BirdEvaluator(),
                       # maximization problem (fitness is sum of values), so higher fitness is better
@@ -28,8 +28,8 @@ def main():
                       ]
                       ),
         breeder=SimpleBreeder(),
-        max_workers=4,
-        max_generation=5,
+        max_workers=5,
+        max_generation=2,
 
         termination_checker=ThresholdFromTargetTerminationChecker(optimal=500, threshold=0.0),
         statistics=BestAverageWorstStatistics()

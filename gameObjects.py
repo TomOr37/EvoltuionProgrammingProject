@@ -68,7 +68,7 @@ class Pipe():
         # draw bottom
         win.blit(self.PIPE_BOTTOM, (self.x, self.bottom))
 
-    def collide(self, bird, win):
+    def collide(self, bird,win):
         """
         returns if a point is colliding with the pipe
         :param bird: Bird object
