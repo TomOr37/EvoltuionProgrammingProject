@@ -140,7 +140,8 @@ The difference between our experiment was the initial population size, and the n
 
 
 
-The following is an example of individual from the first generation. We see their movment is random, and they dont get far.<br/>
+The following is an example of individual from the first generation. We see their movment is random, and they dont get far.
+
 https://user-images.githubusercontent.com/81587688/211167129-0a09fcf4-117a-42d0-82a9-94f6f2766d0e.mp4
 
 
@@ -157,8 +158,10 @@ small population size. <br/>
 
 Even for population of size 80, we got fast convergence rate:
 
-https://user-images.githubusercontent.com/81587688/211167140-0715b53d-8e75-4753-9978-34f18dc5685d.mp4
-###### The Best individual in generation 5.
+https://user-images.githubusercontent.com/81587688/211170457-4cf8b6f7-3467-4307-b43d-a6ef9a7e19df.mp4
+
+
+###### The Best individual in generation 5. Notice the score value.
 
 
 #### Population of 20
@@ -194,16 +197,16 @@ wasn't solve quickly. Even in some trials for the 20 sized population experiment
 This phenomenon probably happen because our search space isn't too big: we needed to find suitable 4 parameters
 for a simple feed forward network,so it was likely that even in the initial population a suitable individual exist. <br />
 However, even when the best individual in the initialed population had low-fitness  (such in `Figure 3`) our algorithm succeeded. <br />
-We think genetic algorithms are powerful tool to optimize neural networks, and in some cases, they are better than
-the normal approaches, such as back-propagation. <br />
 
-An interesting point to research about is our genetic operators. We defined and choose those operators
+An interesting point to continue research about is our genetic operators. We defined and choose those operators
 (`ModelAddDistMutation` , `ModelParamSwapCrossOver`) by intuition, and didn't prove any theoretical reasoning.
 We didn't find any go-to solution for defining genetic operators, but even for those "random" operators, good results are achieved,
 so with more thought and research, maybe a general approach for those kind of problems can be derived, and great results
 can be achieved for harder problems. <br />
 
-Overall , it was interesting to see how complex problem can be solved "easily" by a genetic program
+Overall , it was interesting to see how complex problem can be solved "easily" by a genetic program and we think genetic algorithms are powerful tool to optimize neural networks, and in some cases, they are better than
+the normal approaches, such as back-propagation. <br />
+
 
 
 
