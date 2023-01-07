@@ -129,7 +129,7 @@ This class implements how individuals are made (inheriting from `eckity.creators
 We create `n` individual by creating `n` `Bird` instances.
 
 
-## Experiment and Results
+## Experiments and Results
 
 For all the experiment, we used the following setting:
 
@@ -140,33 +140,71 @@ The difference between our experiment was the initial population size, and the n
 
 
 
-
+The following is an example of individual from the first generation. We see their movment is random, and they dont get far.<br/>
 https://user-images.githubusercontent.com/81587688/211167129-0a09fcf4-117a-42d0-82a9-94f6f2766d0e.mp4
 
 
+We observed that initial large population size lead to quick convergence:
+even in the first generation there was an individual that got far and preformed well: 
+
+https://user-images.githubusercontent.com/81587688/211167140-0715b53d-8e75-4753-9978-34f18dc5685d.mp4
+###### An individual from population size of 400 from the first generation. Got to fitness the limit, 300(video is trimmed).
+
+So in order to not make our experiment not dull, and actually observing progress between generations, we decided to use
+small population size. <br/>
+
+#### Population of 80
+
+Even for population of size 80, we got fast convergence rate:
+
+https://user-images.githubusercontent.com/81587688/211167140-0715b53d-8e75-4753-9978-34f18dc5685d.mp4
+###### The Best individual in generation 5.
 
 
-https://user-images.githubusercontent.com/81587688/211167124-fab95458-3f0e-40a2-9e30-1a8f0cdbe525.mp4
+#### Population of 20
 
+The most insightful results was for population of size 20.
+Even with small starting fitness for the initial population, after 20 (and even less) generations,
+there were individuals with maximum fitness.
+
+#### After 10 generations, reached score of 4 (managed to pass 4 pipes).
 https://user-images.githubusercontent.com/81587688/211167126-506aeee1-c7b5-4375-b6c4-f73cf596f67b.mp4
 
 
-
+#### After 20 generations, reached maximal fitness (video  is cropped)
 https://user-images.githubusercontent.com/81587688/211167128-0a11894d-1a5a-48ae-a31a-7d4310a12369.mp4
 
 
 
+##### Stats and plots for 20 sized population:
+
+###### Figure 2. Average fitness by generation
+![Alt text](readme_images/fitness_averages_20_gen.png "figure 2")
 
 
-https://user-images.githubusercontent.com/81587688/211167132-3c9659d5-6255-4da2-ab51-0003cfefb1d3.mp4
+###### Figure 3. Best fitness by generation
+![Alt text](readme_images/fitness_best_20_gen.png "figure 2")
 
 
-https://user-images.githubusercontent.com/81587688/211167166-54c7cb00-ca4d-4a1d-8bc6-0a48d8d7d9e3.mp4
+## Conclusion
 
+We demonstrate how to create a genetic algorithm to play "Flappy Bird". From our results, it is
+possible that the problem is "easy" for a genetic algorithm: we struggled to find a setting where the problem
+wasn't solve quickly. Even in some trials for the 20 sized population experiment, 2-3 generation was enough. <br />
+This phenomenon probably happen because our search space isn't too big: we needed to find suitable 4 parameters
+for a simple feed forward network,so it was likely that even in the initial population a suitable individual exist. <br />
+However, even when the best individual in the initialed population had low-fitness  (such in `Figure 3`) our algorithm succeeded. <br />
+We think genetic algorithms are powerful tool to optimize neural networks, and in some cases, they are better than
+the normal approaches, such as back-propagation. <br />
 
+An interesting point to research about is our genetic operators. We defined and choose those operators
+(`ModelAddDistMutation` , `ModelParamSwapCrossOver`) by intuition, and didn't prove any theoretical reasoning.
+We didn't find any go-to solution for defining genetic operators, but even for those "random" operators, good results are achieved,
+so with more thought and research, maybe a general approach for those kind of problems can be derived, and great results
+can be achieved for harder problems. <br />
 
+Overall , it was interesting to see how complex problem can be solved "easily" by a genetic program
 
-https://user-images.githubusercontent.com/81587688/211167140-0715b53d-8e75-4753-9978-34f18dc5685d.mp4
 
 
 
