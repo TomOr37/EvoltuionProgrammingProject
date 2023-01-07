@@ -139,3 +139,35 @@ probability `0.1` for both. We used `TournamentSelction` with size of 3. <br />
 The difference between our experiment was the initial population size, and the number of generation.
 
 
+
+
+https://user-images.githubusercontent.com/81587688/211167129-0a09fcf4-117a-42d0-82a9-94f6f2766d0e.mp4
+
+
+
+
+https://user-images.githubusercontent.com/81587688/211167124-fab95458-3f0e-40a2-9e30-1a8f0cdbe525.mp4
+
+https://user-images.githubusercontent.com/81587688/211167126-506aeee1-c7b5-4375-b6c4-f73cf596f67b.mp4
+
+
+
+https://user-images.githubusercontent.com/81587688/211167128-0a11894d-1a5a-48ae-a31a-7d4310a12369.mp4
+
+
+
+
+
+https://user-images.githubusercontent.com/81587688/211167132-3c9659d5-6255-4da2-ab51-0003cfefb1d3.mp4
+
+
+https://user-images.githubusercontent.com/81587688/211167166-54c7cb00-ca4d-4a1d-8bc6-0a48d8d7d9e3.mp4
+
+
+
+
+https://user-images.githubusercontent.com/81587688/211167140-0715b53d-8e75-4753-9978-34f18dc5685d.mp4
+
+
+
+
