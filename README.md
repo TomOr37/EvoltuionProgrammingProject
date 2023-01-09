@@ -149,7 +149,7 @@ We observed that initial large population size lead to quick convergence:
 even in the first generation there was an individual that got far and preformed well: 
 
 https://user-images.githubusercontent.com/81587688/211167140-0715b53d-8e75-4753-9978-34f18dc5685d.mp4
-###### An individual from population size of 400 from the first generation. Got to fitness the limit, 300(video is trimmed).
+###### An individual from population size of 400 from the first generation. Got to fitness  limit, 300(video is trimmed).
 
 So in order to not make our experiment not dull, and actually observing progress between generations, we decided to use
 small population size. <br/>
